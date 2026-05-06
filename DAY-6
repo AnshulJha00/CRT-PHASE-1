@@ -1,0 +1,157 @@
+// problem-1
+// coffee billing system......
+
+#include <iostream>
+
+using namespace std;
+int coffeePrice(int amount){
+    
+    return amount*30;
+}
+
+int main(){
+    int coffee;
+    cout<<"Enter the number of coffee do you want : ";
+    cin>>coffee;
+    cout<<coffeePrice(coffee);
+       
+    
+    return 0;
+}
+
+------------------------------------------------------
+// problem-2 
+// store discout application 
+
+#include <iostream>
+
+using namespace std;
+
+float discount(float amount){
+    float finalAmout = amount * 0.1;
+    return amount - finalAmout;
+}
+
+int main(){
+    cout<<"the final price is : ";
+    cout<<discount(100);
+}
+
+----------------------------------------------------------------------
+
+//  Problem --3 
+// Smart AC system 
+// AC turn temperature automatically 22°C 
+// manually change the temperature 
+// Eco mode temperature should be 24°C 
+// Turbo mode temperature 18° C
+
+#include <iostream>
+
+using namespace std;
+
+void setTemperature(){
+    cout<<"Temperature set to 22° C"<<"\n";
+}
+void setTemperature(double temp){
+    cout << "Temperature set to "<< temp << "°C" << "\n";
+}
+void setTemperature(string mode){
+    if(mode == "ECO"){
+        cout<< "Temperature set to 24°C";
+    } else if (mode == "TURBO"){
+        cout<< "Temperature set to 18°C";
+    }
+}
+
+int main (){
+     setTemperature();
+     setTemperature(22.5);
+     setTemperature("TURBO");
+}
+
+------------------------------------------------------
+// Problem-4
+// Pointers 
+// Declaration, Intalization, Arthmetic operation through pointer 
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;
+//     int *ptr1 = &a;
+    
+//     int b = 20;
+//     int *ptr2 = &b;
+    
+    // int c = a + b;
+//     int c = *ptr1 + *ptr2;
+//     cout<< c;
+// }
+
+-----------------------------------------------------------------------------------------------------
+
+    //  problem --- 5 
+    // swapping to numbers using pointers and functions
+    
+    // #include <iostream>
+    // using namespace std;
+    // void swapNumber(int *ptr1, int  *ptr2){
+    //     int temp = *ptr1;
+    //     *ptr1 = *ptr2;
+    //     *ptr2 = temp;
+    // }
+    
+    
+    
+    
+    // int main(){
+    //     int a,b;
+    //     cin>>a;
+    //     cin>>b;
+    //     swapNumber(&a , &b);
+    //     cout << a << " "<< b;
+        
+    // }
+
+----------------------------------------------------------------------------------------------
+
+// problem----6 
+//  class or objects
+
+#include <iostream>
+using namespace std;
+
+class Student {
+
+public:
+    string name;
+    int age;
+
+    void introduce() {
+        cout << "Hi there, this person name is "
+             << name
+             << " and his age is "
+             << age
+             << "\n";
+    }
+};
+
+int main() {
+
+    Student s1, s2;
+
+    s1.name = "Abhishek";
+    s1.age = 24;
+
+    s2.name = "Rahul";
+    s2.age = 23;
+
+    s1.introduce();
+    s2.introduce();
+
+    return 0;
+}
+    
+  
